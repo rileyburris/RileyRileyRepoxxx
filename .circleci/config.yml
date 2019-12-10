@@ -19,3 +19,9 @@ jobs:
           command: |
             ls -al
             echo '^^^That should look familiar^^^'
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test
